@@ -6,20 +6,34 @@ using namespace std;
 
 class cube {
 private:
-    int height = 2.0;
-    int width = 3.0;
-    int length = 5.0;
+    int height;
+    int width;
+    int length;
 
 public:
+    
+    void getData() {
+        cout << "Enter height: ";
+        cin >> height;
+        cout << "Enter width: ";
+        cin >> width;
+        cout << "Enter length: ";
+        cin >> length;
+    }
+
+    
     int volume() {
-        int v;
-        v = height * width * length;
-        return v;
+        return height * width * length;
     }
 };
 
 int main() {
     cube cube1;
-    int vol = cube1.volume();
+    cube1.getData();  
+
+    int vol = cube1.volume();  // Calculate volume
     cout << "Volume: " << vol << endl;
+
+    return 0;
 }
+
